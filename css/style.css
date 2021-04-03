@@ -27,3 +27,50 @@ p{
     display: flex;
     flex-direction: column;
 }
+button{
+    border: none;
+    cursor: pointer;
+    background: rgba(34, 162, 185, 0.363);
+    padding:2rem;
+    border-radius: 1rem 1rem 0 0;
+}
+button:last-child{
+    background: rgb(136, 8, 8);
+    border-radius:  0 0 1rem 1rem;
+}
+h3{
+    font-size: 2rem;
+}
+input{
+    border: transparent;
+    margin: 2rem 0;
+    padding: 1rem 0;
+    width: 16rem;
+    text-align: center;
+}
+/*# for ids*/
+#range{
+    display : flex;
+    background: green;
+    height: 50px;
+    padding : 0;
+    border-radius: 1rem;
+    margin: 0 0 4rem 0;
+}
+#rangeOutput{
+    font-size: 1.6rem;
+}
+.stats{
+    text-align: left;
+}
+.info{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.info span{
+    font-size : 1.6rem;
+}
+#newGameButton{
+    border-radius: 0;
+}
