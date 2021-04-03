@@ -1,0 +1,29 @@
+html{
+    font-size: 15px;
+    font-weight: 300;
+}
+body{
+    width: 90vw;
+    margin: 0 auto;
+    background: radial-gradient(#17103f, #0e4e75);
+}
+main{
+    text-align:center;
+    background: whitesmoke;
+    border: solid rgb(255, 0, 43);
+    border-width: 0 8px 8px 8px;
+    min-height: 80vh;
+    border-radius: 0 0 3rem 3rem;  /*rem>px*/
+    padding : 1rem;color:teal;
+}
+h2{
+    font-size:40px;
+    margin : 8rem 0;
+}
+p{
+    font-size: 1.8rem;
+}
+.button-wraper{
+    display: flex;
+    flex-direction: column;
+}
