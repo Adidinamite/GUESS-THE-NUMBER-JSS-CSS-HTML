@@ -1,76 +1,43 @@
-html{
-    font-size: 15px;
-    font-weight: 300;
+let computerGuess;
+let userGuesses = [];
+
+function init(){
+    computerGuess = Math.floor(Math.random() * 100 + 1);
+    //console.log(computerGuess);
+    document.getElementById("newGameButton").style.display="none";
+    document.getElementById("gameArea").style.display="none"; // none/ block
 }
-body{
-    width: 90vw;
-    margin: 0 auto;
-    background: radial-gradient(#17103f, #0e4e75);
+
+function startGameView(){
+    document.getElementById("welcomeScreen").style.display = "none";
+    document.getElementById("gameArea").style.display = "block";
 }
-main{
-    text-align:center;
-    background: whitesmoke;
-    border: solid rgb(255, 0, 43);
-    border-width: 0 8px 8px 8px;
-    min-height: 80vh;
-    border-radius: 0 0 3rem 3rem;  /*rem>px*/
-    padding : 1rem;color:teal;
+function easyMode()
+{
+    startGameView();
 }
-h2{
-    font-size:40px;
-    margin : 8rem 0;
+function hardMode()
+{
+    startGameView();
 }
-p{
-    font-size: 1.8rem;
-}
-.button-wraper{
-    display: flex;
-    flex-direction: column;
-}
-button{
-    border: none;
-    cursor: pointer;
-    background: rgba(34, 162, 185, 0.363);
-    padding:2rem;
-    border-radius: 1rem 1rem 0 0;
-}
-button:last-child{
-    background: rgb(136, 8, 8);
-    border-radius:  0 0 1rem 1rem;
-}
-h3{
-    font-size: 2rem;
-}
-input{
-    border: transparent;
-    margin: 2rem 0;
-    padding: 1rem 0;
-    width: 16rem;
-    text-align: center;
-}
-/*# for ids*/
-#range{
-    display : flex;
-    background: green;
-    height: 50px;
-    padding : 0;
-    border-radius: 1rem;
-    margin: 0 0 4rem 0;
-}
-#rangeOutput{
-    font-size: 1.6rem;
-}
-.stats{
-    text-align: left;
-}
-.info{
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.info span{
-    font-size : 1.6rem;
-}
-#newGameButton{
-    border-radius: 0;
+function compareGuess(){
+    const userGuess = Number(document.getElementById("inputBox").value)
+    userGuesses.push(" " + userGuess);
+    document.getElementById("guesses").innerHTML = userGuesses;
+
+    if(userGuess > computerGuess)
+    {
+        document.getElementById("textOutput").innerHTML = "Your guess is higher than weed:(";
+        document.getElementById("inputBox").value = "";
+        //resetting the number
+    }
+    else if(userGuess < computerGuess)
+    {
+        document.getElementById("textOutput").innerHTML = "Your guess is lower than my future";
+        document.getElementById("inputBox").value = "";
+    }
+    else if(userGuess == computerGuess){
+        document.getElementById("textOutput").innerHTML = "You are cheating for sure! No way you Guessed it!"
+        document.getElementById("inputBox").value = "";
+    }
 }
