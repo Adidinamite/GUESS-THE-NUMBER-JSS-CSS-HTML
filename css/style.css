@@ -5,37 +5,45 @@ html{
 body{
     width: 90vw;
     margin: 0 auto;
-    background: radial-gradient(#17103f, #0e4e75);
+    background: radial-gradient(#d9ff0062, #000000);
 }
 main{
     text-align:center;
-    background: whitesmoke;
-    border: solid rgb(255, 0, 43);
+    background: rgb(0, 0, 0);
+    border: solid rgb(123, 255, 0);
     border-width: 0 8px 8px 8px;
     min-height: 80vh;
+    /*max-width: 80vh;*/
+    min-width: 80vh;
     border-radius: 0 0 3rem 3rem;  /*rem>px*/
-    padding : 1rem;color:teal;
+    padding : 1rem;
+    color:rgb(255, 251, 0);
+    font-family: Comic Sans MS, Comic Sans, cursive;
 }
 h2{
     font-size:40px;
-    margin : 8rem 0;
+    margin : 5rem 0;
 }
 p{
     font-size: 1.8rem;
 }
-.button-wraper{
+.button-difficulty{
     display: flex;
-    flex-direction: column;
+    flex-direction:column;
+    padding: 0 8rem 0 8rem;
+}
+#EASY{
+    font-family: Comic Sans MS, Comic Sans, cursive;
 }
 button{
     border: none;
     cursor: pointer;
-    background: rgba(34, 162, 185, 0.363);
+    background: rgb(127, 185, 34);
     padding:2rem;
     border-radius: 1rem 1rem 0 0;
 }
 button:last-child{
-    background: rgb(136, 8, 8);
+    background: rgb(218, 9, 9);
     border-radius:  0 0 1rem 1rem;
 }
 h3{
@@ -51,7 +59,7 @@ input{
 /*# for ids*/
 #range{
     display : flex;
-    background: green;
+    background: rgb(8, 240, 20);
     height: 50px;
     padding : 0;
     border-radius: 1rem;
@@ -73,4 +81,25 @@ input{
 }
 #newGameButton{
     border-radius: 0;
+}
+#gameOver{
+    font-size: 55px;
+}
+#inputBox{
+    border-radius: 1rem;
+}
+#text-retry
+{
+    background-color: rgba(34, 162, 185, 0.363);
+}
+#button-retry{
+    background-color: rgb(225, 222, 65);
+    min-width:80vh;
+    margin-top: -25px;
+    max-height: 10vh;
+    
+}
+#retrytxt{
+    vertical-align: top;
+    
 }
